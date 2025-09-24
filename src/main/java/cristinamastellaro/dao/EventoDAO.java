@@ -1,11 +1,8 @@
 package cristinamastellaro.dao;
 
-import cristinamastellaro.entities.EventType;
 import cristinamastellaro.entities.Evento;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
-
-import java.time.LocalDate;
 
 public class EventoDAO {
 
@@ -15,9 +12,7 @@ public class EventoDAO {
         this.em = em;
     }
 
-    public void save(String titolo, LocalDate dataEvento, EventType tipoEvento, int maxNumPartecipanti) {
-        Evento evento = new Evento(titolo, dataEvento, tipoEvento, maxNumPartecipanti);
-
+    public void save(Evento evento) {
         EntityTransaction et = em.getTransaction();
         et.begin();
         em.persist(evento);

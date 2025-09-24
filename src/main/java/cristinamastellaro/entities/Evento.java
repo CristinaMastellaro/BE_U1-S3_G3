@@ -20,15 +20,19 @@ public class Evento {
     private EventType tipoEvento;
     @Column(name = "max_num_partecipanti")
     private int maxNumPartecipanti;
+    @ManyToOne
+    @JoinColumn(name = "location_id")
+    private Location location;
 
     public Evento() {
     }
 
-    public Evento(String titolo, LocalDate dataEvento, EventType tipoEvento, int maxNumPartecipanti) {
+    public Evento(String titolo, LocalDate dataEvento, EventType tipoEvento, int maxNumPartecipanti, Location location) {
         this.titolo = titolo;
         this.dataEvento = dataEvento;
         this.tipoEvento = tipoEvento;
         this.maxNumPartecipanti = maxNumPartecipanti;
+        this.location = location;
     }
 
     public UUID getId() {
