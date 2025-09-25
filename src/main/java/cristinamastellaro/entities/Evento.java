@@ -7,22 +7,29 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "eventi")
+@Inheritance(strategy = InheritanceType.JOINED)
+@DiscriminatorColumn(name = "event_type")
+
+@NamedQuery(name = "getPartiteVinteInCasa", query = "SELECT pc FROM PartitaCalcio pc WHERE pc.squadraVincente = pc.squadraCasa AND :squadra = pc.squadraCasa")
+@NamedQuery(name = "getPartiteVinteDallaCasa", query = "SELECT pc FROM PartitaCalcio pc WHERE pc.squadraVincente = pc.squadraCasa")
+@NamedQuery(name = "getPartiteVinteInTrasferta", query = "SELECT pc FROM PartitaCalcio pc WHERE pc.squadraVincente = pc.squadraOspite AND :ospite = pc.squadraOspite")
+@NamedQuery(name = "getPartiteVinteDallaTrasferta", query = "SELECT pc FROM PartitaCalcio pc WHERE pc.squadraVincente = pc.squadraOspite")
 public class Evento {
     @Id
     @GeneratedValue
-    private UUID id;
+    protected UUID id;
     @Column(nullable = false)
-    private String titolo;
+    protected String titolo;
     @Column(name = "data_evento")
-    private LocalDate dataEvento;
+    protected LocalDate dataEvento;
     @Column(name = "tipo_evento")
     @Enumerated(EnumType.STRING)
-    private EventType tipoEvento;
+    protected EventType tipoEvento;
     @Column(name = "max_num_partecipanti")
-    private int maxNumPartecipanti;
+    protected int maxNumPartecipanti;
     @ManyToOne
     @JoinColumn(name = "location_id")
-    private Location location;
+    protected Location location;
 
     public Evento() {
     }

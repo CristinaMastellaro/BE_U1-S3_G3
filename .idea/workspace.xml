@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd100083-8272-49cc-a7e7-cb2104694461" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cristinamastellaro/entities/Concerto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cristinamastellaro/entities/GaraAtletica.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cristinamastellaro/entities/Genere.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cristinamastellaro/entities/PartitaCalcio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cristinamastellaro/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cristinamastellaro/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cristinamastellaro/dao/EventoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cristinamastellaro/dao/EventoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cristinamastellaro/entities/Evento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cristinamastellaro/entities/Evento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
